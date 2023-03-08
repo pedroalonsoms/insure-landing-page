@@ -1,55 +1,38 @@
-# Astro Starter Kit: Basics
+# Frontend Mentor - Insure landing page solution
 
-```
-npm create astro@latest -- --template basics
-```
+This is a solution to the [Insure landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+### Links
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Live](https://github.io/pedroalonsoms/insure-landing-page) on GitHub Pages
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+### Built with
 
+- [Astro](https://astro.build/) - Static Site Generator
+- [Tailwind](https://tailwindcss.com/) - For styles
 
-## 🚀 Project Structure
+### Areas that could be improved
 
-Inside of your Astro project, you'll see the following folders and files:
+- Accesibility
+- Better organization for the images folder
+- Separate sections of the page on their own components
+- Better image optimization and descriptions
+- Better HTML semantics
+- Better color naming on Tailwind
+- Handle better absolute positioning and z-indexes
+- Better z-index handling on images and section overlaps
+- Make it pixel-perfect
+- Change project to TypeScript
+- Better tailwind image conventions
+- Handle spacing in a better way
+- Better class organization
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Acknowledgments
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Kevin Powell's [YouTube Channel](https://www.youtube.com/@KevinPowell) helped me a lot
+- Tons of help from [StackOverflow](https://stackoverflow.com/)
+- Issue found on [Astro's GitHub](https://github.com/withastro/astro/issues/4029)
+- MDN [Mozilla Documentation](https://developer.mozilla.org/)
+- [W3Schools](https://www.w3schools.com/)
+- [Tailwind CSS best practices](https://gist.github.com/sandren/0f22e116f01611beab2b1195ab731b63)
+- [Image alt accessibility](https://www.w3.org/WAI/tutorials/images/decorative/)

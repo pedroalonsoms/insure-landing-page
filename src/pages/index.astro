@@ -1,81 +1,161 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Card from "../components/Card.astro";
+import LinkColumn from "../components/LinkColumn.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title="Frontend Mentor | Insure landing page">
+  <!-- TODO: handle zoom-in issues -->
+  <!-- TODO: change spacer padding bottoms to margin bottoms  -->
+  <!-- TODO: handle font loading layout shifts  -->
+  <header
+    class="flex justify-between items-center max-w-6xl mx-auto py-5 uppercase font-karla font-semibold tracking-widest text-sm"
+  >
+    <div>
+      <img src="images/logo.svg" alt="insure logo" />
+    </div>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+    <nav>
+      <ul class="flex gap-5 items-center">
+        {
+          ["How we work", "Blog", "Account"].map((navItem) => (
+            <li>
+              <a href="#" class="text-my_neutral-800">
+                {navItem}
+              </a>
+            </li>
+          ))
+        }
+        <li>
+          <a
+            href="#"
+            class="inline-block px-7 py-2 border-2 border-my_neutral-900 text-my_neutral-900"
+            >View plans</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="relative -z-10 overflow-hidden">
+      <!-- Decoration for the section -->
+      <!-- TODO: handle responsive decoration & image switching -->
+      <div class="absolute -z-10 w-full h-4/6 bg-primary-900"></div>
+      <img
+        class="absolute z-10 -right-2 -top-20"
+        src="images/bg-pattern-intro-right-desktop.svg"
+        alt=""
+      />
+      <img
+        class="absolute z-10 -left-2 -bottom-20"
+        src="images/bg-pattern-intro-left-desktop.svg"
+        alt=""
+      />
+
+      <!-- Actual content -->
+      <div class="max-w-6xl mx-auto grid grid-cols-2 gap-10 py-28">
+        <picture class="order-2">
+          <!-- TODO: image loading is pending -->
+          <!-- TODO: fix weird image right margin -->
+          <source type="image/jpg" srcset="" />
+          <img
+            src="images/image-intro-desktop.jpg"
+            alt="a familiy of four taking each other's hand"
+          />
+        </picture>
+        <div>
+          <!-- Line decoration -->
+          <div class="w-40 pt-0.5 bg-white"></div>
+          <!-- TODO: make space breaks where they should go -->
+          <h1 class="mt-12 text-white text-7xl font-dm_serif">
+            Humanizing your insurance.
+          </h1>
+          <p class="mt-6 text-my_neutral-100 text-sm leading-6 tracking-wider">
+            Get your life insurance coverage easier and faster. We blend our
+            expertise and technology to help you find the plan that's right for
+            you. Ensure you and your loved ones are protected.
+          </p>
+          <a
+            href="#"
+            class="inline-block mt-8 px-7 py-2 text-white font-semibold text-sm border-2 uppercase border-white-900"
+            >View plans</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto py-5">
+      <div class="w-40 pt-0.5 bg-primary-900"></div>
+      <h1 class="mt-14 mb-20 text-7xl font-dm_serif">We're different</h1>
+      <!-- TODO: make grid responsive -->
+      <div class="grid grid-cols-3 gap-4">
+        <Card
+          title="Snappy Process"
+          description="Our application process can be completed in minutes, not hours. Don't get stuck filling in tedious forms."
+          iconSrc="images/icon-snappy-process.svg"
+        />
+        <Card
+          title="Affordable Prices"
+          description="We don't want you worrying about high monthly costs. Our prices may be low, but we still offer the best coverage possible."
+          iconSrc="images/icon-affordable-prices.svg"
+        />
+        <Card
+          title="People First"
+          description="Our plans aren't full of conditions and clauses to prevent payouts. We make sure you're covered when you need it."
+          iconSrc="images/icon-people-first.svg"
+        />
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto my-32 p-16 bg-primary-900 text-white">
+      <h1 class="text-5xl">Find out more about how we work</h1>
+      <a href="#">How we work</a>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <div>
+        <img src="images/logo.svg" alt="insure logo" />
+      </div>
+
+      <nav>
+        <ul>
+          {
+            ["facebook", "twitter", "pinterest", "instagram"].map(
+              (socialName) => (
+                <li>
+                  <a href="#">
+                    <img src={`images/icon-${socialName}.svg`} />
+                    <span class="sr-only">socialName</span>
+                  </a>
+                </li>
+              )
+            )
+          }
+        </ul>
+      </nav>
+    </div>
+
+    <div>
+      <LinkColumn
+        title="Our company"
+        links={["How we work", "Why Insure?", "View plans", "Reviews"]}
+      />
+      <LinkColumn
+        title="Help me"
+        links={["FAQ", "Terms of use", "Privacy policy", "Cookies"]}
+      />
+      <LinkColumn title="Contact" links={["Sales", "Support", "Live chat"]} />
+      <LinkColumn title="Others" links={["Careers", "Press", "Licenses"]} />
+    </div>
+
+    <div>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by Pedro Alonso Moreno Salcedo.
+    </div>
+  </footer>
+</Layout>
