@@ -57,6 +57,11 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 - Use white instead of weird neutral colors?
 - Improve nav buttons pressable area
 - Improve weird-breakpoint navbar look
+- Navbar accesibility
+- Enable typescript and on-load event for navbar javascript
+- Better javascript class toggling
+- Astro top-level return
+- Fix media quey shifting header layouts
 
 ## Acknowledgments
 
@@ -88,3 +93,4 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 - Tailwind's [sr-only class](https://tailwindcss.com/docs/screen-readers)
 - Hex to hsl [colors](https://htmlcolors.com/hex-to-hsl)
 - https://coderwall.com/p/xyuoza/git-cloning-specific-commits
+- https://bobbyhadz.com/blog/typescript-left-hand-side-of-assignment-not-optional

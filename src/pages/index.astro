@@ -16,39 +16,45 @@ import Layout from "../layouts/Layout.astro";
             <img src="images/logo.svg" alt="insure" />
           </div>
 
-          <button class="sm:hidden">
+          <button
+            id="mobile-nav-toggle"
+            aria-controls="mobile-nav"
+            aria-expanded="false"
+            class="sm:hidden"
+          >
             <img src="images/icon-hamburger.svg" alt="" />
             <span class="sr-only">Toggle menu</span>
           </button>
         </div>
 
         <div
-          class="relative z-0 bg-my-neutral-900 px-6 pt-12 pb-72 sm:block sm:bg-transparent sm:p-0"
+          id="mobile-nav"
+          class="relative z-0 hidden bg-my-neutral-900 px-6 pt-12 pb-72 sm:block sm:bg-transparent sm:p-0"
         >
           <nav
             class="flex flex-col gap-8 text-center sm:flex-row sm:items-center"
           >
             <a
               href="#"
-              class="inline-block uppercase tracking-widest text-my-neutral-100 sm:text-sm sm:text-my-neutral-800"
+              class="inline-block uppercase tracking-widest text-my-neutral-100 sm:text-xs sm:text-my-neutral-800"
             >
               How we work
             </a>
             <a
               href="#"
-              class="inline-block uppercase tracking-widest text-my-neutral-100 sm:text-sm sm:text-my-neutral-800"
+              class="inline-block uppercase tracking-widest text-my-neutral-100 sm:text-xs sm:text-my-neutral-800"
             >
               Blog
             </a>
             <a
               href="#"
-              class="inline-block uppercase tracking-widest text-my-neutral-100 sm:text-sm sm:text-my-neutral-800"
+              class="inline-block uppercase tracking-widest text-my-neutral-100 sm:text-xs sm:text-my-neutral-800"
             >
               Account
             </a>
             <a
               href="#"
-              class="inline-block border border-my-neutral-100 py-3 px-6 uppercase tracking-widest text-my-neutral-100 sm:border-my-neutral-900 sm:text-sm sm:text-my-neutral-900"
+              class="inline-block border border-my-neutral-100 py-2 px-6 uppercase tracking-widest text-my-neutral-100 sm:border-my-neutral-900 sm:text-xs sm:text-my-neutral-900"
             >
               View plans
             </a>
@@ -179,3 +185,26 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </footer>
 </Layout>
+
+<script>
+  const mobileNav = document.querySelector<HTMLButtonElement>("#mobile-nav");
+  const mobileNavToggle =
+    document.querySelector<HTMLDivElement>("#mobile-nav-toggle");
+
+  if (mobileNav && mobileNavToggle) {
+    let isNavOpen = false;
+    mobileNavToggle.addEventListener("click", () => {
+      if (!isNavOpen) {
+        mobileNav.classList.remove("hidden");
+        mobileNav.classList.add("block");
+        isNavOpen = true;
+      } else {
+        mobileNav.classList.remove("block");
+        mobileNav.classList.add("hidden");
+        isNavOpen = false;
+      }
+    });
+  } else {
+    console.error("ERROR: elements were not found on the DOM");
+  }
+</script>
