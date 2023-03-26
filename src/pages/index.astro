@@ -9,24 +9,57 @@ import Layout from "../layouts/Layout.astro";
   <!-- TODO: change spacer padding bottoms to margin bottoms  -->
   <!-- TODO: handle font loading layout shifts  -->
   <header>
-    <div class="mx-auto max-w-6xl px-4">
-      <div>
-        <img src="images/logo.svg" alt="insure" />
+    <div class="mx-auto max-w-6xl">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <div class="flex items-center justify-between p-6">
+          <div>
+            <img src="images/logo.svg" alt="insure" />
+          </div>
+
+          <button class="sm:hidden">
+            <img src="images/icon-hamburger.svg" alt="" />
+            <span class="sr-only">Toggle menu</span>
+          </button>
+        </div>
+
+        <div
+          class="relative z-0 bg-my-neutral-900 px-6 pt-12 pb-72 sm:block sm:bg-transparent sm:p-0"
+        >
+          <nav
+            class="flex flex-col gap-8 text-center sm:flex-row sm:items-center"
+          >
+            <a
+              href="#"
+              class="inline-block uppercase tracking-widest text-my-neutral-100 sm:text-sm sm:text-my-neutral-800"
+            >
+              How we work
+            </a>
+            <a
+              href="#"
+              class="inline-block uppercase tracking-widest text-my-neutral-100 sm:text-sm sm:text-my-neutral-800"
+            >
+              Blog
+            </a>
+            <a
+              href="#"
+              class="inline-block uppercase tracking-widest text-my-neutral-100 sm:text-sm sm:text-my-neutral-800"
+            >
+              Account
+            </a>
+            <a
+              href="#"
+              class="inline-block border border-my-neutral-100 py-3 px-6 uppercase tracking-widest text-my-neutral-100 sm:border-my-neutral-900 sm:text-sm sm:text-my-neutral-900"
+            >
+              View plans
+            </a>
+          </nav>
+          <img
+            src="images/bg-pattern-mobile-nav.svg"
+            alt=""
+            class="absolute right-0 bottom-0 max-h-52 w-full sm:hidden"
+          />
+        </div>
       </div>
-
-      <button>
-        <img src="images/icon-hamburger.svg" alt="" />
-        <span class="sr-only">Toggle menu</span>
-      </button>
-
-      <!-- TODO: add div here? -->
-      <nav>
-        <a href="#">How we work</a>
-        <a href="#">Blog</a>
-        <a href="#">Account</a>
-        <a href="#">View plans</a>
-        <img src="images/bg-pattern-mobile-nav.svg" alt="" />
-      </nav>
     </div>
   </header>
 

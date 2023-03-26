@@ -54,6 +54,9 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 - Add image widths
 - Implement social icon hover effect
 - Default section background colors
+- Use white instead of weird neutral colors?
+- Improve nav buttons pressable area
+- Improve weird-breakpoint navbar look
 
 ## Acknowledgments
 
