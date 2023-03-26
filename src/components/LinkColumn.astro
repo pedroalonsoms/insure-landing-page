@@ -7,16 +7,7 @@ export interface Props {
 const { title, links } = Astro.props;
 ---
 
-<div class="uppercase text-xs tracking-widest font-bold">
-  <p class="text-my_neutral-800">{title}</p>
-  <div class="pt-10"></div>
-  <div class="grid gap-4">
-    {
-      links.map((link) => (
-        <a href="#" class="inline-block hover:underline">
-          {link}
-        </a>
-      ))
-    }
-  </div>
+<div>
+  <h2>{title}</h2>
+  {links.map((link) => <a href="#">{link}</a>)}
 </div>

@@ -33,6 +33,28 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 - Better tailwind hovering and media-query classes organization
 - Better color inheritance/cascade - or - separation?
 
+- Compress SVG's
+- Improve semantics & accesibility
+- Extract components into new ones
+- Improve image `type` attributes
+- Implement svg's active state
+- Best way to import fonts via `link` tag
+- Improve BEM class names and naming conventions
+- Try Tailwind again
+- Extract css font values into variables
+- Better css organization
+- Better TypeScript and prop spreading
+- Better CSS inheritance
+- Better absolute positioning
+- Consistent sizing units
+- Better CSS class ordering and sorting
+- Improve img loading and picture element
+- Accesibility
+- Picture element image switching for performance
+- Add image widths
+- Implement social icon hover effect
+- Default section background colors
+
 ## Acknowledgments
 
 - Kevin Powell's [YouTube Channel](https://www.youtube.com/@KevinPowell) helped me a lot
@@ -48,3 +70,18 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 - [CSS Tricks](https://css-tricks.com/)
 - [HTML Validator](https://validator.w3.org/#validate_by_input)
 - Spacer WebFlow Class [Article](https://webflow.com/blog/html-spacer)
+
+- Josh Comeau's [CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/)
+- Kevin Powell's [YouTube Channel](https://www.youtube.com/@KevinPowell)
+- Kevin Powell's Responsive Design [Article](https://www.freecodecamp.org/news/taking-the-right-approach-to-responsive-web-design/)
+- Theo Brownlee's [YouTube Channel](https://www.youtube.com/@t3dotgg)
+- Adam Wathan's [YouTube Channel](https://www.youtube.com/@AdamWathan)
+- Astro's Website [Repo](https://github.com/withastro/astro.build)
+- Workation Repo [Repo](https://github.com/adamwathan/workcation)
+- Git [conflicts](https://devconnected.com/how-to-undo-last-git-commit/)
+- SVG best import method [comparison](https://css-tricks.com/using-svg/)
+- SVG [loader](https://css-tricks.com/svg-loader-a-different-way-to-work-with-external-svg/)
+- Responsive image article by [Web.dev](https://web.dev/learn/design/picture-element/)
+- Tailwind's [sr-only class](https://tailwindcss.com/docs/screen-readers)
+- Hex to hsl [colors](https://htmlcolors.com/hex-to-hsl)
+- https://coderwall.com/p/xyuoza/git-cloning-specific-commits
