@@ -8,6 +8,21 @@ const { title, links } = Astro.props;
 ---
 
 <div>
-  <h2>{title}</h2>
-  {links.map((link) => <a href="#">{link}</a>)}
+  <h2
+    class="text-center text-xs font-bold uppercase tracking-widest text-my-neutral-800 sm:text-left"
+  >
+    {title}
+  </h2>
+  <div class="mt-8 flex flex-col items-center gap-4 sm:items-start">
+    {
+      links.map((link) => (
+        <a
+          href="#"
+          class="text-my-neutral-900 inline-block text-xs font-bold uppercase tracking-widest hover:underline"
+        >
+          {link}
+        </a>
+      ))
+    }
+  </div>
 </div>

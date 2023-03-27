@@ -9,7 +9,7 @@ const { title, description, iconSrc } = Astro.props;
 ---
 
 <div>
-  <img src={iconSrc} alt="" />
-  <h2>{title}</h2>
-  <p>{description}</p>
+  <img src={iconSrc} alt="" class="mx-auto sm:mx-0" />
+  <h2 class="mt-8 font-dm-serif text-3xl">{title}</h2>
+  <p class="mt-4 text-my-neutral-800">{description}</p>
 </div>

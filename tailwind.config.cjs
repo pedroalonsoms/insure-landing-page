@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
@@ -15,8 +17,11 @@ module.exports = {
         },
       },
       fontFamily: {
-        "my-serif": ["DM Serif Display", "serif"],
+        "dm-serif": ["DM Serif Display", "serif"],
         karla: ["Karla", "sans-serif"],
+
+        // Default font override
+        sans: ["Karla", "sans-serif", ...defaultTheme.fontFamily.sans],
       },
     },
   },

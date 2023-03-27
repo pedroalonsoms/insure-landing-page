@@ -62,6 +62,15 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 - Better javascript class toggling
 - Astro top-level return
 - Fix media quey shifting header layouts
+- Make it pixel-perfect
+- Difference between hover and focus
+- Better navbar layout design
+- More consistent breakpoints
+- Consistent margins
+- Fix layout shifts
+- Better responsive transitions on intro-section
+- Add more HTML comments
+- Better borders
 
 ## Acknowledgments
 
