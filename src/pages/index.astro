@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
       <div class="sm:flex sm:items-center sm:justify-between sm:px-6 sm:py-4">
         <div class="flex items-center justify-between px-6 py-4 sm:p-0">
           <div>
-            <img src="images/logo.svg" alt="insure" />
+            <img src="images/logo.svg" alt="insure" width="112" height="18" />
           </div>
 
           <button
@@ -22,7 +22,12 @@ import Layout from "../layouts/Layout.astro";
             aria-expanded="false"
             class="sm:hidden"
           >
-            <img src="images/icon-hamburger.svg" alt="" />
+            <img
+              src="images/icon-hamburger.svg"
+              alt=""
+              width="32"
+              height="32"
+            />
             <span class="sr-only">Toggle menu</span>
           </button>
         </div>
@@ -88,11 +93,16 @@ import Layout from "../layouts/Layout.astro";
               <picture>
                 <source
                   srcset="images/image-intro-desktop.jpg"
+                  type="image/jpeg"
+                  width="540"
+                  height="650"
                   media="(min-width: 640px)"
                 />
                 <img
                   src="images/image-intro-mobile.jpg"
                   alt="A familiy of four taking each other's hand"
+                  width="375"
+                  height="451"
                   class="h-full w-full object-cover object-left"
                 />
               </picture>
@@ -107,9 +117,17 @@ import Layout from "../layouts/Layout.astro";
               >
                 <source
                   srcset="images/bg-pattern-intro-left-desktop.svg"
+                  type="image/svg+xml"
+                  width="195"
+                  height="504"
                   media="(min-width: 640px)"
                 />
-                <img src="images/bg-pattern-intro-left-mobile.svg" alt="" />
+                <img
+                  src="images/bg-pattern-intro-left-mobile.svg"
+                  alt=""
+                  width="168"
+                  height="165"
+                />
               </picture>
 
               <picture
@@ -117,9 +135,17 @@ import Layout from "../layouts/Layout.astro";
               >
                 <source
                   srcset="images/bg-pattern-intro-right-desktop.svg"
+                  type="image/svg+xml"
+                  width="436"
+                  height="593"
                   media="(min-width: 640px)"
                 />
-                <img src="images/bg-pattern-intro-right-mobile.svg" alt="" />
+                <img
+                  src="images/bg-pattern-intro-right-mobile.svg"
+                  alt=""
+                  width="124"
+                  height="330"
+                />
               </picture>
 
               <div class="hidden h-px w-40 bg-my-neutral-100 sm:mb-12 sm:block">
@@ -185,11 +211,16 @@ import Layout from "../layouts/Layout.astro";
               <picture class="absolute top-0 right-0 -z-10 h-full">
                 <source
                   srcset="images/bg-pattern-how-we-work-desktop.svg"
+                  type="image/svg+xml"
                   media="(min-width: 768px)"
+                  width="434"
+                  height="250"
                 />
                 <img
                   src="images/bg-pattern-how-we-work-mobile.svg"
                   alt=""
+                  width="176"
+                  height="317"
                   class="h-full"
                 />
               </picture>
@@ -219,9 +250,17 @@ import Layout from "../layouts/Layout.astro";
       <picture class="absolute top-0 left-0 -z-10">
         <source
           srcset="images/bg-pattern-footer-desktop.svg"
+          type="image/svg+xml"
           media="(min-width: 768px)"
+          width="528"
+          height="231"
         />
-        <img src="images/bg-pattern-footer-mobile.svg" alt="" />
+        <img
+          src="images/bg-pattern-footer-mobile.svg"
+          alt=""
+          width="374"
+          height="173"
+        />
       </picture>
 
       <!-- Actual content -->
@@ -231,7 +270,7 @@ import Layout from "../layouts/Layout.astro";
             class="flex flex-col items-center gap-8 border-b border-my-neutral-800 pb-8 sm:flex-row sm:justify-between"
           >
             <div>
-              <img src="images/logo.svg" alt="insure logo" />
+              <img src="images/logo.svg" alt="insure" width="112" height="18" />
             </div>
 
             <nav class="flex items-center gap-4">
@@ -239,7 +278,12 @@ import Layout from "../layouts/Layout.astro";
                 ["facebook", "twitter", "pinterest", "instagram"].map(
                   (social) => (
                     <a href="#">
-                      <img src={`images/icon-${social}.svg`} alt="" />
+                      <img
+                        src={`images/icon-${social}.svg`}
+                        alt=""
+                        width="24"
+                        height="24"
+                      />
                       <span class="sr-only">{social}</span>
                     </a>
                   )

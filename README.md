@@ -71,6 +71,8 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 - Better responsive transitions on intro-section
 - Add more HTML comments
 - Better borders
+- Extract Astro in Layout components
+- Extracto buttons into Astro components
 
 ## Acknowledgments
 
