@@ -8,7 +8,12 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 
 ### Showcase
 
+#### Desktop preview
+
 ![Desktop preview](preview.png)
+
+#### Mobile ligthouse stats
+
 ![Mobile ligthouse stats](stats.png)
 
 ### Built with
