@@ -287,8 +287,11 @@ import Layout from "../layouts/Layout.astro";
   const mobileNav = document.querySelector<HTMLButtonElement>("#mobile-nav");
   const mobileNavToggle =
     document.querySelector<HTMLDivElement>("#mobile-nav-toggle");
+  const mobileNavToggleImage = document.querySelector<HTMLImageElement>(
+    "#mobile-nav-toggle img"
+  );
 
-  if (mobileNav && mobileNavToggle) {
+  if (mobileNav && mobileNavToggle && mobileNavToggleImage) {
     let isNavOpen = false;
     mobileNavToggle.addEventListener("click", () => {
       if (!isNavOpen) {
@@ -296,6 +299,7 @@ import Layout from "../layouts/Layout.astro";
         mobileNav.classList.add("block");
 
         mobileNavToggle.setAttribute("aria-expanded", "true");
+        mobileNavToggleImage.setAttribute("src", "images/icon-close.svg");
 
         isNavOpen = true;
       } else {
@@ -303,6 +307,7 @@ import Layout from "../layouts/Layout.astro";
         mobileNav.classList.add("hidden");
 
         mobileNavToggle.setAttribute("aria-expanded", "false");
+        mobileNavToggleImage.setAttribute("src", "images/icon-hamburger.svg");
 
         isNavOpen = false;
       }
