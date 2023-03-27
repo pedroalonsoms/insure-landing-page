@@ -1,4 +1,6 @@
 ---
+import LinkColumn from "../components/LinkColumn.astro";
+
 export interface Props {
   title: string;
 }
@@ -40,6 +42,195 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <header>
+      <div class="mx-auto max-w-6xl">
+        <div class="sm:flex sm:items-center sm:justify-between sm:px-6 sm:py-4">
+          <div class="flex items-center justify-between px-6 py-4 sm:p-0">
+            <div>
+              <img src="images/logo.svg" alt="insure" width="112" height="18" />
+            </div>
+
+            <button
+              id="mobile-nav-toggle"
+              aria-controls="mobile-nav"
+              aria-expanded="false"
+              class="sm:hidden"
+            >
+              <img
+                src="images/icon-hamburger.svg"
+                alt=""
+                width="32"
+                height="32"
+              />
+              <span class="sr-only">Toggle menu</span>
+            </button>
+          </div>
+
+          <div
+            id="mobile-nav"
+            class="relative z-0 hidden bg-my-neutral-900 px-6 pt-12 pb-72 sm:block sm:bg-transparent sm:p-0"
+          >
+            <nav
+              class="flex flex-col gap-8 text-center sm:flex-row sm:items-center"
+            >
+              <a
+                href="#"
+                class="inline-block font-bold uppercase tracking-widest text-my-neutral-100 sm:text-xs sm:text-my-neutral-800 sm:hover:text-my-neutral-900"
+              >
+                How we work
+              </a>
+              <a
+                href="#"
+                class="inline-block font-bold uppercase tracking-widest text-my-neutral-100 sm:text-xs sm:text-my-neutral-800 sm:hover:text-my-neutral-900"
+              >
+                Blog
+              </a>
+              <a
+                href="#"
+                class="inline-block font-bold uppercase tracking-widest text-my-neutral-100 sm:text-xs sm:text-my-neutral-800 sm:hover:text-my-neutral-900"
+              >
+                Account
+              </a>
+              <a
+                href="#"
+                class="inline-block border border-my-neutral-100 py-2 px-6 text-center font-bold uppercase tracking-widest text-my-neutral-100 hover:bg-my-neutral-900 hover:text-my-neutral-100 sm:border-my-neutral-900 sm:text-xs sm:text-my-neutral-900"
+              >
+                View plans
+              </a>
+            </nav>
+            <img
+              src="images/bg-pattern-mobile-nav.svg"
+              class="absolute right-0 bottom-0 max-h-52 w-full sm:hidden"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="relative z-0 bg-my-neutral-100">
+      <div class="overflow-hidden">
+        <!-- Decoration for the section -->
+        <picture class="absolute top-0 left-0 -z-10">
+          <source
+            srcset="images/bg-pattern-footer-desktop.svg"
+            type="image/svg+xml"
+            media="(min-width: 768px)"
+            width="528"
+            height="231"
+          />
+          <img
+            src="images/bg-pattern-footer-mobile.svg"
+            alt=""
+            width="374"
+            height="173"
+          />
+        </picture>
+
+        <!-- Actual content -->
+        <div class="mx-auto max-w-6xl">
+          <div class="px-6 py-24">
+            <div
+              class="flex flex-col items-center gap-8 border-b border-my-neutral-800 pb-8 sm:flex-row sm:justify-between"
+            >
+              <div>
+                <img
+                  src="images/logo.svg"
+                  alt="insure"
+                  width="112"
+                  height="18"
+                />
+              </div>
+
+              <nav class="flex items-center gap-4">
+                {
+                  ["facebook", "twitter", "pinterest", "instagram"].map(
+                    (social) => (
+                      <a href="#">
+                        <img
+                          src={`images/icon-${social}.svg`}
+                          alt=""
+                          width="24"
+                          height="24"
+                        />
+                        <span class="sr-only">{social}</span>
+                      </a>
+                    )
+                  )
+                }
+              </nav>
+            </div>
+
+            <div class="mt-14 grid gap-12 sm:grid-cols-4">
+              <LinkColumn
+                title="Our company"
+                links={["How we work", "Why Insure?", "View plans", "Reviews"]}
+              />
+              <LinkColumn
+                title="Help me"
+                links={["FAQ", "Terms of use", "Privacy policy", "Cookies"]}
+              />
+              <LinkColumn
+                title="Contact"
+                links={["Sales", "Support", "Live chat"]}
+              />
+              <LinkColumn
+                title="Others"
+                links={["Careers", "Press", "Licenses"]}
+              />
+            </div>
+
+            <p class="mt-12 text-center text-sm">
+              Challenge by
+              <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                class="font-bold text-my-neutral-900 hover:underline"
+              >
+                Frontend Mentor.
+              </a>Coded by Pedro Alonso Moreno Salcedo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
+
+<script>
+  const mobileNav = document.querySelector<HTMLButtonElement>("#mobile-nav");
+  const mobileNavToggle =
+    document.querySelector<HTMLDivElement>("#mobile-nav-toggle");
+  const mobileNavToggleImage = document.querySelector<HTMLImageElement>(
+    "#mobile-nav-toggle img"
+  );
+
+  if (mobileNav && mobileNavToggle && mobileNavToggleImage) {
+    let isNavOpen = false;
+    mobileNavToggle.addEventListener("click", () => {
+      if (!isNavOpen) {
+        mobileNav.classList.remove("hidden");
+        mobileNav.classList.add("block");
+
+        mobileNavToggle.setAttribute("aria-expanded", "true");
+        mobileNavToggleImage.setAttribute("src", "images/icon-close.svg");
+
+        isNavOpen = true;
+      } else {
+        mobileNav.classList.remove("block");
+        mobileNav.classList.add("hidden");
+
+        mobileNavToggle.setAttribute("aria-expanded", "false");
+        mobileNavToggleImage.setAttribute("src", "images/icon-hamburger.svg");
+
+        isNavOpen = false;
+      }
+    });
+  } else {
+    console.error("ERROR: elements were not found on the DOM");
+  }
+</script>
